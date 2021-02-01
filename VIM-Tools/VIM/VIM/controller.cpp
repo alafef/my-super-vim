@@ -54,12 +54,12 @@ void ModeManager::NAV_mode()
 		{
 		case 'i':
 			INS_mode(); break;
-		case '0': case '^':
+		case '0': case '^': case KEY_HOME:
 			controller->model.to_begin_of_line(); break;
 		case 'I':
 			controller->model.to_begin_of_line();
 			INS_mode(); break;
-		case '$':
+		case '$': case KEY_END:
 			controller->model.to_end_of_line(); break;
 		case 'A':
 			controller->model.to_end_of_line();
